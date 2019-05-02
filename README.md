@@ -159,6 +159,12 @@ ggplot(data = mean_data) +
    geom_vline(xintercept =0.139538, col=c("darkgreen")) +
   ggtitle("")
 ```
+
+### Conclusions 
+* We can coclude that avacado prices have increased since 2015. Specifically there has been a spike in prices sicne 2017. Prices also tend to increase the most during certain months of the year. Our permutation test supports that fact showing that the value that we got from our data is not very common, since it lies very far outside of the realm of the rest of the distibution. We also see that prices for organic and for conventional are very different but more or less increase and decrease at the same rate. 
+
+
+
 # SubQuestions
 
 ## Has the total volume of avacado's increased since 2015? 
