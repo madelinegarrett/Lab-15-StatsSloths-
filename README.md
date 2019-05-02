@@ -184,3 +184,16 @@ bp + coord_flip()
 
 
 ```
+## Reflections
+Lab 2 Team Goal:
+* To learn how to code in R and to work together well as a team by communicating, addressing problems, and working hard.
+* We feel that our team has achieved our goal because we were able to complete all labs and tRATS as a team. We all individualy brought something to our team to make us stronger. We communicated well and worked hard to get things done.
+
+Keep Doing:
+* Keep starting the labs early. It's better to have more time to submit in case you run into submission errors.
+
+Stop Doing: 
+* Stop tring to knit and submit labs at the last minute to avoid computer crashes right when it's due.
+  
+Start Doing:
+* Start doing review sessions with the team to ensure everyone gets high iRAT and tRAT scores.
