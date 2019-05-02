@@ -203,3 +203,7 @@ Stop Doing:
 
 Start Doing:
 * Start doing review sessions with the team to ensure everyone gets high iRAT and tRAT scores.
+
+
+
+### Individual Reflections
