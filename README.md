@@ -28,12 +28,16 @@ Adata <- Adf %>%
 
 ```
 
-# Have avacado prices increased since 2015? Is is different for Conventional and Organic? 
+# Have avocado prices increased since 2015? Is is different for Conventional and Organic? 
 
 ### Domain Expert 
+* The Domain Expert for this project is a Millennial Magazine that wants to publish an article about the increased price of avacados and what that means for avodcado toast. They are interested in knowing if avacado prices have increased since 2015 and if they have increased for both conventional and organic. They then want to use our findings to help support their articles. We will support our answer and go above and beyond by also answering these subqestions: ****ENTER SUB QUESTIONS HERE*****
 
+### Question Background
+* This question is interesting because it can tell and predict how avacado prices will increase, this is interesting for almost everyone who likes avocados. It is also important information for shop owners and supermarket owners to know if avacado prices were increasing. 
 
-
+## Data 
+The data we are using is avacado data from 2015 to March 2018. https://www.kaggle.com//avocado-prices 
 
 ```{r}
 Adata
@@ -54,6 +58,7 @@ ggplot(data = Adata) +
   facet_wrap( ~Adata$year) +
   scale_fill_manual(values=c("darkgreen", "yellowgreen",  "palegreen3", "olivedrab2"))
 ```
+
 ```{r}
 ggplot(data = Adata) + 
   stat_bin(mapping = aes(x = AveragePrice, fill = type), color = "darkBlue" ,bins =  55) +
