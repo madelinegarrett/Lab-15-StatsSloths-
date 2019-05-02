@@ -1,20 +1,26 @@
-# Lab-15-StatsSloths-
-
-
+---
+title: "Lab-15-StatisticalSloths"
+output: html_document
+---
+Madeline Garrett, Zandy Boone, Kevin Luth, Katie Stewart
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
-# Import and Tidy the Data
+![ ](avocado.png)
+
+```{r, include = FALSE}
 library(tidyverse)
 library(lubridate)
+library(modelr)
+
 Adf <- read_csv("avocado.csv")
 Adf$X1 <- NULL
 Adf$"XLarge Bags" <- NULL
 Adf$"4046" <- NULL
 Adf$"4225" <- NULL
+names(Adf)[3]<-"Vol"
 Adf$"4770" <- NULL
 
 Adata <- Adf %>%
@@ -22,9 +28,15 @@ Adata <- Adf %>%
 
 ```
 
-# Have avacado prices increased for both Conventional and Organic? 
+# Have avacado prices increased since 2015? Is is different for Conventional and Organic? 
+
+### Domain Expert 
+
+
+
 
 ```{r}
+Adata
 Atime <- Adata %>% 
     group_by(Year, Month, type) %>% 
     select(Year, Month, type, AveragePrice) %>%
@@ -55,12 +67,12 @@ ggplot(data = Adata) +
 ```{r}
 Adf$Date <- as.Date(Adf$Date, "%Y-%m-%d")
 
-price_trend <- Adf %>% select(Date, AveragePrice, type) %>%
-ggplot(aes(x=Date, y=AveragePrice)) + 
-  geom_line(aes(color=type, fill=type), position = position_dodge(0.8)) +
-  scale_fill_manual(values=c("darkgreen", "yellowgreen"))
+Price <- Adf %>% select(Date, AveragePrice) %>%
+ggplot(aes(x=Date, y=AveragePrice, color = "darkgreen" )) + 
+  geom_smooth() +
+  scale_color_manual(values=c("darkgreen"))
 
-price_trend
+Price
 ```
 
 ```{r}
@@ -137,4 +149,33 @@ ggplot(data = mean_data) +
 ```
 
 
-# SubQuestions 
+# SubQuestions
+
+## Has the total volume of avacado's increased since 2015? 
+Madeline's Subquestion 
+
+* Importance: 
+
+This question is important because the price could be increasing/decreasing becase there are more/less avocados in the market. Knowing the answer to this question will help us to be able to fully know whether or not avacado prices have raised. This question also raises the important look in to how the demand for avacados has increased in recent years. 
+
+* New Tools: 
+
+I used the 
+
+```{r}
+
+library(plotly)
+mod <- lm(Vol ~ region, data = Adata)
+
+grid <- Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Vol")
+
+bp <- ggplot(Adata, aes(region, Vol), width = 500, height = 100000) + 
+  geom_boxplot() +
+  geom_point(data = grid, colour = "red", size = 4)
+
+bp + coord_flip() 
+
+
+```
