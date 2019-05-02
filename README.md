@@ -38,7 +38,9 @@ Adata <- Adf %>%
 
 ## Data 
 * The data we are using is avacado data from 2015 to March 2018. https://www.kaggle.com//avocado-prices 
+* This is a graph of Average Avocado Prices over time. It is seperated for both Convetional and Organic
 
+# Findings 
 ```{r}
 Adata
 Atime <- Adata %>% 
@@ -52,6 +54,9 @@ ggplot(data= Atime, aes(x=Month, y=averagePrice, color=as.factor(Year)))+
     scale_color_manual(values=c("darkgreen", "yellowgreen",  "palegreen3", "yellow2"))
 ```
 
+
+
+* This is a graph of Avacado Prices distributed over each year. 
 ```{r}
 ggplot(data = Adata) + 
   stat_bin(mapping = aes(x = AveragePrice, fill = as.factor(year)), color = "black",bins =  55) +
@@ -59,6 +64,8 @@ ggplot(data = Adata) +
   scale_fill_manual(values=c("darkgreen", "yellowgreen",  "palegreen3", "olivedrab2"))
 ```
 
+
+This graph of the distribution of Avocado Prices for Conventional and Organic. 
 ```{r}
 ggplot(data = Adata) + 
   stat_bin(mapping = aes(x = AveragePrice, fill = type), color = "darkBlue" ,bins =  55) +
@@ -68,7 +75,7 @@ ggplot(data = Adata) +
 
 
 
-
+This is a graph of avacado prices over time. 
 ```{r}
 Adf$Date <- as.Date(Adf$Date, "%Y-%m-%d")
 
@@ -152,8 +159,6 @@ ggplot(data = mean_data) +
    geom_vline(xintercept =0.139538, col=c("darkgreen")) +
   ggtitle("")
 ```
-
-
 # SubQuestions
 
 ## Has the total volume of avacado's increased since 2015? 
@@ -184,6 +189,7 @@ bp + coord_flip()
 
 
 ```
+
 ## Reflections
 Lab 2 Team Goal:
 * To learn how to code in R and to work together well as a team by communicating, addressing problems, and working hard.
@@ -194,6 +200,6 @@ Keep Doing:
 
 Stop Doing: 
 * Stop tring to knit and submit labs at the last minute to avoid computer crashes right when it's due.
-  
+
 Start Doing:
 * Start doing review sessions with the team to ensure everyone gets high iRAT and tRAT scores.
