@@ -195,6 +195,8 @@ bp + coord_flip()
 
 
 ```
+## Has the region with the most volume of avocado's changed since 2015?
+Katie's Section
 
 ## Reflections
 Lab 2 Team Goal:
