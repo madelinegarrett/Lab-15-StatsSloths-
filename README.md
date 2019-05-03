@@ -167,34 +167,42 @@ ggplot(data = mean_data) +
 
 # SubQuestions
 
-## Has the total volume of avacado's increased since 2015? 
+## Where has the total volume of avacado's the highest? 
 Madeline's Subquestion 
 
 * Importance: 
 
-This question is important because the price could be increasing/decreasing becase there are more/less avocados in the market. Knowing the answer to this question will help us to be able to fully know whether or not avacado prices have raised. This question also raises the important look in to how the demand for avacados has increased in recent years. 
+This question is important because the price could be increasing/decreasing becase there are more/less avocados in the market. Knowing the answer to this question will help us to be able to fully know whether or not avacado prices have raised. This question also raises an important look in to how the demand for avacados has increased in recent years.  
 
 * New Tools: 
 
-I used the 
+I used the lm and add predictions functions to help me to make this graph. These added predictions to my data and made it easier to see. I also used data_grid to help me when graphing the data. 
+
+* Conclusion: 
+
+I conclude that South Central has the highest volume of Avocado's in the country in comparison to the other regions, with California close behind. This relates to the overall question because we know that there is a supply and demand so areas that are growing large amounts of avocados are doing so because of such a high demand. 
 
 ```{r}
+#View(Adata)
+Areg <- Adata %>%
+  filter(region == "TotalUS" | region == "Southeast" | region == "Northeast" | region == "Midsouth" | region == "SouthCentral" | region == "Plains" | region == "California")
 
-library(plotly)
-mod <- lm(Vol ~ region, data = Adata)
-
-grid <- Adata %>% 
+mod <- lm(Vol ~ region, data = Areg)
+grid <- Areg %>% 
   data_grid(region) %>% 
   add_predictions(mod, "Vol")
 
-bp <- ggplot(Adata, aes(region, Vol), width = 500, height = 100000) + 
+bp <- ggplot(Areg, aes(region, Vol, color = region)) + 
   geom_boxplot() +
-  geom_point(data = grid, colour = "red", size = 4)
+  geom_point(data = grid, colour = "darkgreen", size = 4)
 
-bp + coord_flip() 
-
+p <- bp+ coord_flip() +
+  ggtitle("Volumes and Predictions in Regions Across the US")
+p
 
 ```
+
+
 ## Has the region with the most volume of avocado's changed since 2015?
 Katie's Section
 
