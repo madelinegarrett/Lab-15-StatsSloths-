@@ -207,8 +207,9 @@ p
 Katie's Section
 
 ## Does location matter when looking at price changes for avocados? For conventional vs organic?
-Kevin's Section
+Kevin's Subquestion
 * Importance: This question helps us to answer our main question because it can tell us whether or not the price change was consistent throughout the country or if there were different changes based on the region.
+* Tools: I used a permutation test to see whether the regional labels matter when looking at average price changes in avocados from 2015 to 2017.
 
 ## Reflections
 Lab 2 Team Goal:
