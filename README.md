@@ -210,6 +210,8 @@ Katie's Section
 Kevin's Subquestion
 * Importance: This question helps us to answer our main question because it can tell us whether or not the price change was consistent throughout the country or if there were different changes based on the region.
 * Tools: I used a permutation test to see whether the regional labels matter when looking at average price changes in avocados from 2015 to 2017.
+* Conclusion: The results of my permutation test show that the original mean difference between avocado prices in 2015 to 2017 is rare compared the sampled mean differences. This means that the regions do matter when looking at price differences which indicates that while the price may have increased overall in the country, individual regions likely had differing price changes.
+
 
 ## Reflections
 Lab 2 Team Goal:
