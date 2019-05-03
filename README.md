@@ -203,8 +203,10 @@ p
 ```
 
 
-## Has the region with the most volume of avocado's changed since 2015?
+## Has the region with the most volume of avocados changed since 2015?
 Katie's Section
+
+## Does location matter when looking at price changes for avocados?
 
 ## Reflections
 Lab 2 Team Goal:
