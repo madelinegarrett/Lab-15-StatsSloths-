@@ -203,7 +203,7 @@ p
 ```
 
 
-## Has the region with the most volume of avocados changed since 2015?
+## How does the number total bags vary between regions?
 Katie's Section
 
 ## Does location matter when looking at price changes for avocados?
