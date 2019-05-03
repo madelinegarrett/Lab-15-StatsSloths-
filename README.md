@@ -34,10 +34,10 @@ Adata <- Adf %>%
 * The Domain Expert for this project is a Millennial Magazine that wants to publish an article about the increased price of avocados and what that means for avocado toast. They are interested in knowing if avocado prices have increased since 2015 and if they have increased for both conventional and organic. They then want to use our findings to help support their articles. We will support our answer and go above and beyond by also answering these subqestions: ****ENTER SUB QUESTIONS HERE*****
 
 ### Question Background
-* This question is interesting because it can tell and predict how avacado prices will increase, this is interesting for almost everyone who likes avocados. It is also important information for shop owners and supermarket owners to know if avocado prices were increasing. 
+* This question is interesting because it can tell and predict how avocado prices will increase, this is interesting for almost everyone who likes avocados. It is also important information for shop owners and supermarket owners to know if avocado prices were increasing. 
 
 ## Data 
-* The data we are using is avacado data from 2015 to March 2018. https://www.kaggle.com//avocado-prices 
+* The data we are using is avocado data from 2015 to March 2018. https://www.kaggle.com//avocado-prices 
 * This is a graph of Average Avocado Prices over time. It is seperated for both Convetional and Organic
 
 # Findings 
