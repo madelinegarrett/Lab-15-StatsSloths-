@@ -279,9 +279,9 @@ ggplot(data = mean_data) +
   ggtitle("Distribution of Mean Differences for Average Price") +
   labs(x = "Price Change")
 ```
-## Which region/regions has the highest number og total bags sold and which region has the lowest number of total bags sold and how did that change over time?
+## is there a difference over time of organic vs conventional avocados sold and how does it differe in region?
 Zandy's subquestion
-* Importance: This question is important because it can help determine which regions more avocados are sold/ where people like to eat avocados and then determine if prices in those regions have changed for avocados.
+* Importance: This question is important because it can help determine which regions more  covential or organic avocados are sold/ where people like to eat those avocados and then determine if prices in those regions have changed for avocados between the two types.
 
 ## Reflections
 Lab 2 Team Goal:
