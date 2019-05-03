@@ -292,3 +292,7 @@ Start Doing:
 
 
 ### Individual Reflections
+Kevin Luth: 
+* 6 Months: Six months after graduating I would like to be working in the sports industry in some capacity.
+* 5 Years: Five years after graduating I would like to be working for a professional sports team using data science to help with roster building. My ideal sport to work with would be football, but I would enjoy working with basketball as well.
+* Above were the goals I had from lab 2. 
