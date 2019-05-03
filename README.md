@@ -283,6 +283,62 @@ ggplot(data = mean_data) +
 Zandy's subquestion
 * Importance: This question is important because it can help determine which regions more  covential or organic avocados are sold/ where people like to eat those avocados and then determine if prices in those regions have changed for avocados between the two types.
 
+
+```{r}
+
+filtered_Adata <- Adata %>%
+  select(1, 6, 9,  11)
+
+mean_2015_data_conventional <- filtered_Adata %>%
+  filter(Year == 2015 & type == "conventional") %>%
+  group_by(region) %>%
+  summarise(mean(`Total Bags`))
+
+mean_2015_data_organic <- filtered_Adata %>%
+  filter(Year == 2015 & type == "organic") %>%
+  group_by(region) %>%
+  summarise(mean(`Total Bags`))
+
+mean_2016_data_organic <- filtered_Adata %>%
+  filter(Year == 2016 & type == "organic") %>%
+  group_by(region) %>%
+  summarise(mean(`Total Bags`))
+
+
+mean_2016_data_conventional <- filtered_Adata %>%
+  filter(Year == 2016 & type == "conventional") %>%
+  group_by(region) %>%
+  summarise(mean(`Total Bags`))
+
+
+
+mean_2017_data_conventional <- filtered_Adata %>%
+  filter(Year == 2017 & type == "conventional") %>%
+  group_by(region) %>%
+  summarise(mean(`Total Bags`))
+
+
+
+mean_2017_data_organic <- filtered_Adata %>%
+  filter(Year == 2017 & type == "organic") %>%
+  group_by(region) %>%
+  summarise(mean(`Total Bags`))
+
+
+
+mean_2018_data_conventional <- filtered_Adata %>%
+  filter(Year == 2018 & type == "conventional") %>%
+  group_by(region) %>%
+  summarise(mean(`Total Bags`))
+
+
+
+mean_2018_data_organic <- filtered_Adata %>%
+  filter(Year == 2018 & type == "organic") %>%
+  group_by(region) %>%
+  summarise(mean(`Total Bags`))
+
+```
 ## Reflections
 Lab 2 Team Goal:
 * To learn how to code in R and to work together well as a team by communicating, addressing problems, and working hard.
