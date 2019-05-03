@@ -161,7 +161,7 @@ ggplot(data = mean_data) +
 ```
 
 ### Conclusions 
-* We can coclude that avacado prices have increased since 2015. Specifically there has been a spike in prices sicne 2017. Prices also tend to increase the most during certain months of the year. Our permutation test supports that fact showing that the value that we got from our data is not very common, since it lies very far outside of the realm of the rest of the distibution. We also see that prices for organic and for conventional are very different but more or less increase and decrease at the same rate. 
+* We can conclude that avocado prices have increased since 2015. Specifically there has been a spike in prices sicne 2017. Prices also tend to increase the most during certain months of the year. Our permutation test supports that fact showing that the value that we got from our data is not very common, since it lies very far outside of the realm of the rest of the distibution. We also see that prices for organic and for conventional are very different but more or less increase and decrease at the same rate. 
 
 
 
@@ -172,7 +172,7 @@ Madeline's Subquestion
 
 * Importance: 
 
-This question is important because the price could be increasing/decreasing becase there are more/less avocados in the market. Knowing the answer to this question will help us to be able to fully know whether or not avacado prices have raised. This question also raises an important look in to how the demand for avocados has increased in recent years.  
+This question is important because the price could be increasing/decreasing becase there are more/less avocados in the market. Knowing the answer to this question will help us to be able to fully know whether or not avocado prices have raised. This question also raises an important look in to how the demand for avocados has increased in recent years.  
 
 * New Tools: 
 
