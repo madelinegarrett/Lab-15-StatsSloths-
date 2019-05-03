@@ -212,6 +212,14 @@ Kevin's Subquestion
 * Tools: I used a permutation test to see whether the regional labels matter when looking at average price changes in avocados from 2015 to 2017.
 * Conclusion: The results of my permutation test show that the original mean difference between avocado prices in 2015 to 2017 is rare compared the sampled mean differences. This means that the regions do matter when looking at price differences which indicates that while the price may have increased overall in the country, individual regions likely had differing price changes.
 ```{r}
+orig15 <- avocados %>% #1.38
+  filter(year == 2015) %>%
+  summarise(mean(AveragePrice))
+orig17 <- avocados %>% #1.52
+  filter(year == 2017) %>%
+  summarise(mean(AveragePrice))
+orig_diff <- 1.52 - 1.38
+
 perm_mean <- function(perms = 1000, values, n1)
 {
   ## Variables ##
