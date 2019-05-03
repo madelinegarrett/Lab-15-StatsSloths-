@@ -167,12 +167,12 @@ ggplot(data = mean_data) +
 
 # SubQuestions
 
-## Where is the total volume of avacado's the highest? 
+## Where is the total volume of avocados the highest? 
 Madeline's Subquestion 
 
 * Importance: 
 
-This question is important because the price could be increasing/decreasing becase there are more/less avocados in the market. Knowing the answer to this question will help us to be able to fully know whether or not avacado prices have raised. This question also raises an important look in to how the demand for avacados has increased in recent years.  
+This question is important because the price could be increasing/decreasing becase there are more/less avocados in the market. Knowing the answer to this question will help us to be able to fully know whether or not avacado prices have raised. This question also raises an important look in to how the demand for avocados has increased in recent years.  
 
 * New Tools: 
 
@@ -180,7 +180,7 @@ I used the lm and add predictions functions to help me to make this graph. These
 
 * Conclusion: 
 
-I conclude that South Central has the highest volume of Avocado's in the country in comparison to the other regions, with California close behind. This relates to the overall question because we know that there is a supply and demand so areas that are growing large amounts of avocados are doing so because of such a high demand. 
+I conclude that South Central has the highest volume of avocados in the country in comparison to the other regions, with California close behind. This relates to the overall question because we know that there is a supply and demand so areas that are growing large amounts of avocados are doing so because of such a high demand. 
 
 ```{r}
 #View(Adata)
@@ -208,6 +208,7 @@ Katie's Section
 
 ## Does location matter when looking at price changes for avocados? For conventional vs organic?
 Kevin's Section
+* Importance: This question helps us to answer our main question because it can tell us whether or not the price change was consistent throughout the country or if there were different changes based on the region.
 
 ## Reflections
 Lab 2 Team Goal:
