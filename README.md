@@ -205,6 +205,14 @@ p
 
 ## How does the number total bags vary between regions?
 Katie's Section
+```{r}
+colnames(Adata)[5] <- "totalbags"
+bags <- lm(totalbags ~ region, data = Adata)
+plot <- Adata %>%
+  data_grid(region) %>%
+  add_predictions(bags, "Bags")
+```
+
 
 ## Does location matter when looking at price changes for avocados?
 Kevin's Subquestion
@@ -296,4 +304,9 @@ Kevin Luth:
 * 6 Months: Six months after graduating I would like to be working in the sports industry in some capacity.
 * 5 Years: Five years after graduating I would like to be working for a professional sports team using data science to help with roster building. My ideal sport to work with would be football, but I would enjoy working with basketball as well.
 * Above were the goals I had from lab 2. My goals have not really changed much from the start of this course to now. I would actually say I am even more sure of them now than before because I have been able to see different ways I could use data science techniques in sports. Before I did not have any concrete ideas of how to use data science in sports but now I can see how some of the tools we learned this semester can be put towards helping a team succeed. I learned a lot in this course as I had no experience with any of the things we did coming in, but now I feel like I at least have a grasp on the concepts we used and have a good basis moving forward in data science. Some advice I would give myself would be to keep doing the labs earlier in the week, start trying to understand why a certain tool might be used in different contexts rather than just because the instructions say to, and stop reading the chapters at the last minute so I have more time to comprehend them.
+Katie Stewart:
+* 6 Months: Six months after graduation I want to be traveling while working on app development. 
+* 5 years: Five years after graduation I want to be working as a data scientist as well as have a fully working a developed app available to the world. 
+* Above were the goals I had at the beginning of this semester. My goals have not changed much since then but I am more interested in applying statistics to more things I do in my life and I can do that with the knowledge from this course. When I came into this course I had some programming experience and just a little bit of r experience. Looking back at myself then I truly knew nothing about r. I have learned so much about this program and I know there is still much more to learn. If I could give myself advice I would say to try more of the reading exercises and work harder to learn the concepts. There is a lot to learn in only a few months and spending more time to learn will be helpful in the long run. 
+
 
