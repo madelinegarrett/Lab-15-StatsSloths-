@@ -206,7 +206,8 @@ p
 ## Has the region with the most volume of avocados changed since 2015?
 Katie's Section
 
-## Does location matter when looking at price changes for avocados?
+## Does location matter when looking at price changes for avocados? For conventional vs organic?
+Kevin's Section
 
 ## Reflections
 Lab 2 Team Goal:
