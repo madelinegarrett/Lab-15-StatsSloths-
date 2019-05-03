@@ -167,7 +167,7 @@ ggplot(data = mean_data) +
 
 # SubQuestions
 
-## Where has the total volume of avacado's the highest? 
+## Where is the total volume of avacado's the highest? 
 Madeline's Subquestion 
 
 * Importance: 
