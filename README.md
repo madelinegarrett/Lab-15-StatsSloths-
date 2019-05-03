@@ -31,10 +31,10 @@ Adata <- Adf %>%
 # Have avocado prices increased since 2015? Is is different for Conventional and Organic? 
 
 ### Domain Expert 
-* The Domain Expert for this project is a Millennial Magazine that wants to publish an article about the increased price of avacados and what that means for avodcado toast. They are interested in knowing if avacado prices have increased since 2015 and if they have increased for both conventional and organic. They then want to use our findings to help support their articles. We will support our answer and go above and beyond by also answering these subqestions: ****ENTER SUB QUESTIONS HERE*****
+* The Domain Expert for this project is a Millennial Magazine that wants to publish an article about the increased price of avocados and what that means for avocado toast. They are interested in knowing if avocado prices have increased since 2015 and if they have increased for both conventional and organic. They then want to use our findings to help support their articles. We will support our answer and go above and beyond by also answering these subqestions: ****ENTER SUB QUESTIONS HERE*****
 
 ### Question Background
-* This question is interesting because it can tell and predict how avacado prices will increase, this is interesting for almost everyone who likes avocados. It is also important information for shop owners and supermarket owners to know if avacado prices were increasing. 
+* This question is interesting because it can tell and predict how avacado prices will increase, this is interesting for almost everyone who likes avocados. It is also important information for shop owners and supermarket owners to know if avocado prices were increasing. 
 
 ## Data 
 * The data we are using is avacado data from 2015 to March 2018. https://www.kaggle.com//avocado-prices 
@@ -56,7 +56,7 @@ ggplot(data= Atime, aes(x=Month, y=averagePrice, color=as.factor(Year)))+
 
 
 
-* This is a graph of Avacado Prices distributed over each year. 
+* This is a graph of Avocado Prices distributed over each year. 
 ```{r}
 ggplot(data = Adata) + 
   stat_bin(mapping = aes(x = AveragePrice, fill = as.factor(year)), color = "black",bins =  55) +
@@ -75,7 +75,7 @@ ggplot(data = Adata) +
 
 
 
-This is a graph of avacado prices over time. 
+This is a graph of avocado prices over time. 
 ```{r}
 Adf$Date <- as.Date(Adf$Date, "%Y-%m-%d")
 
