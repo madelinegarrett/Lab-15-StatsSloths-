@@ -285,9 +285,55 @@ Zandy's subquestion
 
 
 ```{r}
-
 filtered_Adata <- Adata %>%
   select(1, 6, 9,  11)
+
+filtered_2015_Adata_conventional <- filtered_Adata %>%
+  filter(Year == 2015 & type == "conventional") %>%
+  group_by(region) %>%
+  summarise(sum(`Total Bags`))
+
+
+filtered_2015_Adata_organic <- filtered_Adata %>%
+  filter(Year == 2015 & type == "organic") %>%
+  group_by(region) %>%
+  summarise(sum(`Total Bags`)) 
+
+
+filtered_2016_Adata_conventional <- filtered_Adata %>%
+  filter(Year == 2016 & type == "conventional") %>%
+  group_by(region) %>%
+  summarise(sum(`Total Bags`))
+
+
+filtered_2016_Adata_organic <- filtered_Adata %>%
+  filter(Year == 2016 & type == "organic") %>%
+  group_by(region) %>%
+  summarise(sum(`Total Bags`)) 
+
+
+filtered_2017_Adata_conventional <- filtered_Adata %>%
+  filter(Year == 2017 & type == "conventional") %>%
+  group_by(region) %>%
+  summarise(sum(`Total Bags`))
+
+
+filtered_2017_Adata_organic <- filtered_Adata %>%
+  filter(Year == 2017 & type == "organic") %>%
+  group_by(region) %>%
+  summarise(sum(`Total Bags`)) 
+
+
+filtered_2018_Adata_conventional <- filtered_Adata %>%
+  filter(Year == 2018 & type == "conventional") %>%
+  group_by(region) %>%
+  summarise(sum(`Total Bags`))
+
+
+filtered_2018_Adata_organic <- filtered_Adata %>%
+  filter(Year == 2018 & type == "organic") %>%
+  group_by(region) %>%
+  summarise(sum(`Total Bags`)) 
 
 mean_2015_data_conventional <- filtered_Adata %>%
   filter(Year == 2015 & type == "conventional") %>%
@@ -338,6 +384,113 @@ mean_2018_data_organic <- filtered_Adata %>%
   group_by(region) %>%
   summarise(mean(`Total Bags`))
 
+
+colnames(filtered_2015_Adata_conventional)[2] <- "totalbags"
+
+
+mod_2015_conentional <- lm(totalbags ~ region, data = filtered_2015_Adata_conventional)
+grid_1 <- filtered_Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Bags")
+
+boxplot_1 <- ggplot(filtered_2015_Adata_conventional, aes(region, totalbags, color = region)) +
+  geom_boxplot() +
+  geom_point(data = grid_1, color = "red", size = 3)
+
+
+colnames(filtered_2015_Adata_organic)[2] <- "totalbags"
+
+
+mod_2015_organic <- lm(totalbags ~ region, data = filtered_2015_Adata_organic)
+grid_1 <- filtered_Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Bags")
+
+
+boxplot_2 <- ggplot(filtered_2015_Adata_organic, aes(region, totalbags, color = region)) +
+  geom_boxplot() +
+  geom_point(data = grid_1, color = "red", size = 3)
+
+
+colnames(filtered_2016_Adata_conventional)[2] <- "totalbags"
+
+
+mod_2016_conentional <- lm(totalbags ~ region, data = filtered_2016_Adata_conventional)
+grid_1 <- filtered_Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Bags")
+
+boxplot_3 <- ggplot(filtered_2016_Adata_conventional, aes(region, totalbags, color = region)) +
+  geom_boxplot() +
+  geom_point(data = grid_1, color = "red", size = 3)
+
+
+colnames(filtered_2016_Adata_organic)[2] <- "totalbags"
+
+
+mod_2016_organic <- lm(totalbags ~ region, data = filtered_2016_Adata_organic)
+grid_1 <- filtered_Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Bags")
+
+
+boxplot_4 <- ggplot(filtered_2016_Adata_organic, aes(region, totalbags, color = region)) +
+  geom_boxplot() +
+  geom_point(data = grid_1, color = "red", size = 3)
+
+
+colnames(filtered_2017_Adata_conventional)[2] <- "totalbags"
+
+
+mod_2017_conentional <- lm(totalbags ~ region, data = filtered_2017_Adata_conventional)
+grid_1 <- filtered_Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Bags")
+
+boxplot_5 <- ggplot(filtered_2017_Adata_conventional, aes(region, totalbags, color = region)) +
+  geom_boxplot() +
+  geom_point(data = grid_1, color = "red", size = 3)
+
+
+colnames(filtered_2017_Adata_organic)[2] <- "totalbags"
+
+
+mod_2017_organic <- lm(totalbags ~ region, data = filtered_2017_Adata_organic)
+grid_1 <- filtered_Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Bags")
+
+
+boxplot_6 <- ggplot(filtered_2017_Adata_organic, aes(region, totalbags, color = region)) +
+  geom_boxplot() +
+  geom_point(data = grid_1, color = "red", size = 3)
+
+
+colnames(filtered_2018_Adata_conventional)[2] <- "totalbags"
+
+
+mod_2018_conentional <- lm(totalbags ~ region, data = filtered_2018_Adata_conventional)
+grid_1 <- filtered_Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Bags")
+
+boxplot_7 <- ggplot(filtered_2018_Adata_conventional, aes(region, totalbags, color = region)) +
+  geom_boxplot() +
+  geom_point(data = grid_1, color = "red", size = 3)
+
+
+colnames(filtered_2018_Adata_organic)[2] <- "totalbags"
+
+
+mod_2018_organic <- lm(totalbags ~ region, data = filtered_2018_Adata_organic)
+grid_1 <- filtered_Adata %>% 
+  data_grid(region) %>% 
+  add_predictions(mod, "Bags")
+
+
+boxplot_8 <- ggplot(filtered_2018_Adata_organic, aes(region, totalbags, color = region)) +
+  geom_boxplot() +
+  geom_point(data = grid_1, color = "red", size = 3)
 ```
 ## Reflections
 Lab 2 Team Goal:
