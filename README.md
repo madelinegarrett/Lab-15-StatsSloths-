@@ -282,7 +282,8 @@ ggplot(data = mean_data) +
 ## is there a difference over time of organic vs conventional avocados sold and how does it differe in region?
 Zandy's subquestion
 * Importance: This question is important because it can help determine which regions more  covential or organic avocados are sold/ where people like to eat those avocados and then determine if prices in those regions have changed for avocados between the two types.
-
+* Tools: I used linear models to determine the rise or fall in regions in the numbers of avocados sold in total bags based on type over 2015-2018.
+* Conclusion: 
 
 ```{r}
 filtered_Adata <- Adata %>%
