@@ -293,7 +293,15 @@ Zandy's subquestion
 * 2016_Syracuse_Conventional = 1,171,436.6
 * 2016_California_Organic = 3,392,457.15
 * 2016_Sacremento_Organic = 19,288.51
-* Conclusion: 
+* 2017_California_Conventional = 86,127,283
+* 2017_Syracuuse_Conventional = 1,216,837.5
+* 2017_California_Organnic = 3,709,751.30
+* 2017_Sacremento_Organic = 74,780.48
+* 2018_California_Conventional = 22,638,694.9
+* 2018_Albany_Conventional = 245,240.8
+* 2018_California_Organic = 1,044,708.80
+* 2018_Boise_Organic = 21,393.70
+* Conclusion: Th most avocados sold in total bags whether conventional or organic happened in California expect in 2015 where more organic avocados were sold in Denver. Overall more conventional avocados were sold than organic avocados until 2018 where sales of conventional avocados in California significantly dropped after a steady increase in past years. Overall the least amount of avocados sold whether conventional or organic happened in either Sacremento or San Francisco in California and Syracuse or Albany in New York.
 
 ```{r}
 filtered_Adata <- Adata %>%
