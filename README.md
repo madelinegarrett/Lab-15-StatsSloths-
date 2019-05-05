@@ -205,12 +205,24 @@ p
 
 ## How does the number total bags vary between regions?
 Katie's Section
+* Importance: This question is important because it can help to show us if there are certain regions in the United States that consume more avocados than others.
+* Tools: I created a linear model using lm() and also used add_predictions. For some reason I had an error I had never seen before and was unable to resolve it.
+* Conclusion: The results of my plot show that California has the most number of total bags out of the 6 regions. South Central is also similar to California. The plains appear to have the lowest number of total bags out of these regions.
 ```{r}
 colnames(Adata)[5] <- "totalbags"
-bags <- lm(totalbags ~ region, data = Adata)
-plot <- Adata %>%
+regionD <-  Adata %>%
+  filter(region == "TotalUS" | region == "Southeast" | region == "Northeast" | region == "Midsouth" | region == "SouthCentral" | region == "Plains" | region == "California")
+keeps <- c("totalbags", "region")
+regionD <- regionD[keeps]
+bags <- lm(totalbags ~ region, data = regionD)
+plot <- regionD %>%
   data_grid(region) %>%
   add_predictions(bags, "Bags")
+ggplot(data = regionD)+
+  geom_point(mapping = aes(x=region, y = totalbags))+
+  ggtitle("Total Bags for each Region of the US")+
+  xlab("Region")+
+  ylab("Total number of Bags")
 ```
 
 
